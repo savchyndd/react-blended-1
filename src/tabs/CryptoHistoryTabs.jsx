@@ -1,3 +1,7 @@
+import transactions from 'data/transactions.json';
+
+import CryptoHistory from 'components/CryptoHistory/CryptoHistory';
+
 export const CryptoHistoryTabs = () => {
-  return <h1>CryptoHistoryTabs</h1>;
+  return <CryptoHistory items={transactions} />;
 };
