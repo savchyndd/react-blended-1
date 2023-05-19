@@ -2,11 +2,13 @@ import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 
 import { Header, Section, Container, Text } from 'components';
+
 import {
   BlogCardTabs,
   ForbesListTabs,
   StatisticsTabs,
   CryptoHistoryTabs,
+  EmployeeListTab,
 } from 'tabs';
 
 export const App = () => {
@@ -28,7 +30,10 @@ export const App = () => {
                 <Text>Forbes list</Text>
               </Tab>
               <Tab>
-                <Text>Transaction history </Text>
+                <Text>Transaction history</Text>
+              </Tab>
+              <Tab>
+                <Text>Employee list</Text>
               </Tab>
             </TabList>
 
@@ -46,6 +51,10 @@ export const App = () => {
 
             <TabPanel>
               <CryptoHistoryTabs />
+            </TabPanel>
+
+            <TabPanel>
+              <EmployeeListTab />
             </TabPanel>
           </Tabs>
         </Container>
