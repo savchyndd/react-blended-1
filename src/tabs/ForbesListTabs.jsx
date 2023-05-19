@@ -1,3 +1,6 @@
+import ForbesList from 'components/ForbesList/ForbesList';
+import forbes from 'data/forbes.json';
+
 export const ForbesListTabs = () => {
-  return <h1>ForbesListTabs</h1>;
+  return <ForbesList list={forbes} />;
 };
