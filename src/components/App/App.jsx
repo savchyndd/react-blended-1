@@ -4,9 +4,9 @@ import 'react-tabs/style/react-tabs.css';
 import { Header, Section, Container, Text } from 'components';
 import {
   BlogCardTabs,
-  ForbesList,
-  SectionStatistics,
-  TransactionHistory,
+  ForbesListTabs,
+  StatisticsTabs,
+  CryptoHistoryTabs,
 } from 'tabs';
 
 export const App = () => {
@@ -37,15 +37,15 @@ export const App = () => {
             </TabPanel>
 
             <TabPanel>
-              <SectionStatistics />
+              <StatisticsTabs />
             </TabPanel>
 
             <TabPanel>
-              <ForbesList />
+              <ForbesListTabs />
             </TabPanel>
 
             <TabPanel>
-              <TransactionHistory />
+              <CryptoHistoryTabs />
             </TabPanel>
           </Tabs>
         </Container>
