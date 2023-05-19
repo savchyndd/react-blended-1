@@ -3,7 +3,7 @@ import 'react-tabs/style/react-tabs.css';
 
 import { Header, Section, Container, Text } from 'components';
 import {
-  BlogCard,
+  BlogCardTabs,
   ForbesList,
   SectionStatistics,
   TransactionHistory,
@@ -33,7 +33,7 @@ export const App = () => {
             </TabList>
 
             <TabPanel>
-              <BlogCard />
+              <BlogCardTabs />
             </TabPanel>
 
             <TabPanel>
