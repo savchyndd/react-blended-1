@@ -12,7 +12,7 @@ export const UserBox = styled.li`
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: calc(100% / 4);
+  width: 300px;
   gap: ${props => props.theme.spacing(1)};
 
   background: ${props => props.theme.colors.light};
@@ -26,5 +26,32 @@ export const UserBox = styled.li`
 
   p {
     margin: 0;
+  }
+
+  button {
+    padding: 6px 12px;
+
+    color: ${({ theme }) => theme.colors.white};
+    background-color: ${({ theme }) => theme.colors.primary};
+    border-radius: ${({ theme }) => theme.spacing(2)};
+
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      box-shadow: ${({ theme }) => theme.shadows.small};
+    }
+  }
+
+  span {
+    color: black;
+
+    border-radius: ${({ theme }) => theme.spacing(2)};
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      color: ${({ theme }) => theme.colors.primary};
+    }
   }
 `;

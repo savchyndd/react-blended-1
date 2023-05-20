@@ -1,21 +1,16 @@
 import PropTypes from 'prop-types';
-import { UserBox, UserList } from './UsersList.module';
+import { UserBox, UserList } from './UsersList.styled';
 
 export const UsersList = ({ users, deleteUser, toggleJobStatus }) => {
   return (
     <UserList>
-      {users.map(({ id, name, email, hasJob }) => (
+      {users.map(({ id, name, email, hasJob = false }) => (
         <UserBox key={id}>
           <p>Name: {name}</p>
           <p>Email: {email}</p>
           <p>
             Has job:{' '}
-            <span onClick={() => toggleJobStatus(id)}>
-              {
-                hasJob
-                // hasJob.toString()
-              }
-            </span>
+            <span onClick={() => toggleJobStatus(id)}>{hasJob.toString()}</span>
           </p>
           <button type="button" onClick={() => deleteUser(id)}>
             Delete

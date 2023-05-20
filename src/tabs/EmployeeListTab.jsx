@@ -3,7 +3,7 @@ import { nanoid } from 'nanoid';
 
 import { data } from 'data/users';
 import { UsersList } from '../components/EmployeeList/UsersList/UsersList';
-import { Button } from '../components/EmployeeList/Button/Button';
+import { FormButton } from '../components/EmployeeList/FormButton/FormButton';
 import { AddUserForm } from '../components/EmployeeList/AddUserForm/AddUserForm';
 
 export class EmployeeListTab extends Component {
@@ -59,7 +59,7 @@ export class EmployeeListTab extends Component {
         {isFormShown ? (
           <AddUserForm addUser={this.addUser} />
         ) : (
-          <Button text="Add user" clickHandler={this.openForm} />
+          <FormButton text="Add user" clickHandler={this.openForm} />
         )}
       </>
     );

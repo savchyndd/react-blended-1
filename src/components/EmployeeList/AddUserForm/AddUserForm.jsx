@@ -1,5 +1,8 @@
 import { Component } from 'react';
 
+import { Button } from 'components';
+import { SearchFormStyled, InputSearch } from './AddUserForm.style';
+
 export class AddUserForm extends Component {
   state = {
     name: '',
@@ -21,27 +24,26 @@ export class AddUserForm extends Component {
     const { name, email } = this.state;
 
     return (
-      <form onSubmit={this.handleSubmit}>
-        <label>
-          Name
-          <input
-            name="name"
-            type="text"
-            value={name}
-            onChange={this.handleChange}
-          />
-        </label>
-        <label>
-          Email
-          <input
-            name="email"
-            type="text"
-            value={email}
-            onChange={this.handleChange}
-          />
-        </label>
-        <button type="submit">Save</button>
-      </form>
+      <SearchFormStyled onSubmit={this.handleSubmit}>
+        <InputSearch
+          placeholder="Write employee Name"
+          required
+          name="name"
+          type="text"
+          value={name}
+          onChange={this.handleChange}
+        />
+
+        <InputSearch
+          placeholder="Write employee Email"
+          required
+          name="email"
+          type="text"
+          value={email}
+          onChange={this.handleChange}
+        />
+        <Button type="submit">Save</Button>
+      </SearchFormStyled>
     );
   }
 }
