@@ -10,7 +10,12 @@ export const UsersList = ({ users, deleteUser, toggleJobStatus }) => {
           <p>Email: {email}</p>
           <p>
             Has job:{' '}
-            <span onClick={() => toggleJobStatus(id)}>{hasJob.toString()}</span>
+            <span onClick={() => toggleJobStatus(id)}>
+              {
+                hasJob
+                // hasJob.toString()
+              }
+            </span>
           </p>
           <button type="button" onClick={() => deleteUser(id)}>
             Delete
